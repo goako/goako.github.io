@@ -1,0 +1,93 @@
+<html lang="en">
+<label for="name">Full name</label>
+<input id="name" name="name" required />
+
+
+<label for="email">Email</label>
+<input id="email" name="email" type="email" required />
+
+
+<label for="phone">Phone (optional)</label>
+<input id="phone" name="phone" type="tel" />
+
+
+<label for="message">Brief reason for contact</label>
+<textarea id="message" name="message" rows="4"></textarea>
+
+
+<label for="consent" style="font-size:13px;margin-top:8px"><input id="consent" name="consent" type="checkbox" required /> I consent to having my information used to contact me (see privacy policy).</label>
+
+
+<div style="margin-top:12px; display:flex; gap:8px">
+<button class="btn" type="submit">Send request</button>
+<a href="tel:+1234567890" style="display:inline-flex; align-items:center; padding:10px 14px; border-radius:10px; border:1px solid #e6edf3; text-decoration:none">Call now</a>
+</div>
+</form>
+</div>
+
+
+<aside>
+<div class="card">
+<strong>Office</strong>
+<p style="margin:6px 0;color:var(--muted)">123 Health St, Suite 200 — Your City</p>
+<p style="margin:6px 0;color:var(--muted)">Hours: Mon–Fri 9:00–18:00</p>
+<p style="margin:6px 0;color:var(--muted)">Telehealth available across state lines where licensed.</p>
+</div>
+
+
+<div class="card" style="margin-top:12px">
+<strong>Insurance & Fees</strong>
+<p style="color:var(--muted);margin:6px 0">I accept private pay and select insurers. Sliding scale available — contact for details.</p>
+</div>
+</aside>
+
+
+</div>
+</section>
+
+
+<section id="testimonials" style="margin-top:28px">
+<h2>What clients say</h2>
+<div class="card" style="padding:18px">"Helpful, compassionate, and practical — I felt better within weeks." — A. Patient (testimonial used with permission)</div>
+</section>
+
+
+<section id="faq" style="margin-top:28px">
+<h2>FAQ</h2>
+<div class="card" style="padding:18px">
+<p><strong>How do I prepare for my first session?</strong> Bring a list of goals & medications; we'll review history and create a treatment plan.</p>
+</div>
+</section>
+
+
+</main>
+
+
+<footer>
+<div style="max-width:960px;margin:0 auto;padding:0 18px">
+<small>© <span id="year"></span> Dr. Jane Doe — License #123456. <a href="#privacy">Privacy & data use</a></small>
+</div>
+</footer>
+
+
+<script>
+// small helpers: replace or connect to real form handlers and analytics
+document.getElementById('year').textContent = new Date().getFullYear();
+function validateForm(e){
+// add custom validation or integrate with booking system
+return true;
+}
+</script>
+
+
+<!--
+Next steps (developer checklist):
+- Replace placeholder images and text.
+- Connect the form to a secure endpoint (Formspree, Netlify Forms, or your server) and ensure TLS.
+- Add JSON-LD structured data for Person/LocalBusiness.
+- Add analytics & conversion tracking, and configure privacy/cookie banner.
+- Test on mobile, run Lighthouse for performance & accessibility.
+- Deploy to a host (Netlify, Vercel, GitHub Pages) or move into a CMS.
+-->
+</body>
+</html>
