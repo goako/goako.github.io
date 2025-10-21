@@ -1,93 +1,499 @@
-<html lang="en">
-<label for="name">Full name</label>
-<input id="name" name="name" required />
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Florencia Medina — Psicóloga</title>
+    <meta
+      name="description"
+      content="Psicóloga. Terapia presencial y online. EMDR, Gestalt y psicodiagnóstico. Reservá tu turno."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Simple, modern CSS inspired by psicologa.com.ar */
+      :root {
+        --accent: #6b46c1; /* purple */
+        --muted: #6b7280;
+        --max-width: 1100px;
+        --radius: 14px;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: #111;
+        background: #f8fafc;
+        line-height: 1.5;
+      }
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 24px;
+      }
 
+      header {
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        border-bottom: 1px solid #eef2f7;
+      }
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 24px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand .logo {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), #9f7aea);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 700;
+      }
+      nav ul {
+        display: flex;
+        gap: 18px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .cta {
+        background: var(--accent);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-decoration: none;
+      }
 
-<label for="email">Email</label>
-<input id="email" name="email" type="email" required />
+      /* Hero */
+      .hero {
+        background: #fff;
+        margin: 20px 0;
+        padding: 28px;
+        border-radius: var(--radius);
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 28px;
+        align-items: center;
+      }
+      .hero h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+      .hero h2 {
+        margin: 6px 0 18px;
+        color: var(--muted);
+        font-weight: 500;
+      }
+      .hero p {
+        margin: 0;
+        color: #334155;
+      }
+      .hero .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .contact a {
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #e6e9ef;
+      }
 
+      /* Sections */
+      section {
+        margin: 18px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .card {
+        background: #fff;
+        padding: 16px;
+        border-radius: 12px;
+        border: 1px solid #eef2f7;
+      }
+      .card h3 {
+        margin: 0 0 8px;
+      }
+      .faq .item {
+        background: #fff;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #eef2f7;
+        margin-bottom: 8px;
+      }
+      .faq .q {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+      .faq .a {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.28s ease;
+        padding-top: 0;
+      }
 
-<label for="phone">Phone (optional)</label>
-<input id="phone" name="phone" type="tel" />
+      footer {
+        padding: 28px 0;
+        color: var(--muted);
+        text-align: center;
+      }
 
+      /* Responsive */
+      @media (max-width: 980px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        nav ul {
+          display: none;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .brand .logo {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container topbar">
+        <div class="brand">
+          <div class="logo">ED</div>
+          <div>
+            <div style="font-weight: 700">Florencia Medina</div>
+            <div style="font-size: 13px; color: var(--muted)">
+              Lic. en Psicología — MP -
+            </div>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+            <li><a href="#consultorio">Consultorio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <a class="cta" href="tel:+543516416699">(364) 440-1297</a>
+        </div>
+      </div>
+    </header>
 
-<label for="message">Brief reason for contact</label>
-<textarea id="message" name="message" rows="4"></textarea>
+    <main class="container">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">Florencia Medina — Licenciada en Psicología</h1>
+          <h2>[Descripcion Corta]</h2>
+          <p>
+            Soy licenciada en Psicología, egresada de la Universidad Nacional de
+            Córdoba [...]
+          </p>
 
+          <div
+            style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap"
+          >
+            <a class="cta" href="#contacto">Reservá tu turno</a>
+            <a
+              href="mailto:lic_eugeniaduarte@yahoo.com.ar"
+              style="
+                padding: 10px 12px;
+                border-radius: 10px;
+                border: 1px solid #e6e9ef;
+                text-decoration: none;
+                color: #111;
+              "
+              >Enviar consulta</a
+            >
+          </div>
+        </div>
 
-<label for="consent" style="font-size:13px;margin-top:8px"><input id="consent" name="consent" type="checkbox" required /> I consent to having my information used to contact me (see privacy policy).</label>
+        <aside
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+          "
+        >
+          <img
+            src="images/file.jpg"
+            alt="florencia medina psicologa turnos online"
+            style="
+              width: 100%;
+              border-radius: 12px;
+              object-fit: cover;
+              display: block;
+              border: 1px solid #eef2f7;
+            "
+          />
+          <div
+            style="width: 100%; display: flex; flex-direction: column; gap: 8px"
+          >
+            <div
+              style="
+                background: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #eef2f7;
+                text-align: center;
+              "
+            >
+              Consultorio online
+            </div>
+            <div
+              style="
+                background: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #eef2f7;
+                text-align: center;
+              "
+            >
+              Google Meet · Zoom · WhatsApp
+            </div>
+          </div>
+        </aside>
+      </section>
 
+      <!-- Sobre mí -->
+      <section id="sobre">
+        <h2>Sobre mí</h2>
+        <div class="card" style="margin-top: 10px">
+          <p>Soy licenciada en Psicología [-------]</p>
+          <p style="margin-top: 10px; font-size: 14px; color: var(--muted)">
+            Formación: Universidad Nacional de Córdoba
+          </p>
+        </div>
+      </section>
 
-<div style="margin-top:12px; display:flex; gap:8px">
-<button class="btn" type="submit">Send request</button>
-<a href="tel:+1234567890" style="display:inline-flex; align-items:center; padding:10px 14px; border-radius:10px; border:1px solid #e6edf3; text-decoration:none">Call now</a>
-</div>
-</form>
-</div>
+      <!-- Servicios -->
+      <section id="servicios">
+        <h2>Mis servicios</h2>
+        <div class="grid" style="margin-top: 12px">
+          <div class="card">
+            <h3>Psicodiagnóstico</h3>
+            <p>
+              Aplicación de pruebas psicométricas y proyectivas para evaluación
+              integral.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Psicoterapia</h3>
+            <p>Terapia focalizada en el motivo de consulta</p>
+          </div>
+          <div class="card">
+            <h3>Abordaje interdisciplinario</h3>
+            <p>
+              Derivaciones a psiquiatría, nutrición, médico clínico y trabajo
+              conjunto cuando es necesario.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <!-- FAQ -->
+      <section id="faq" class="faq">
+        <h2>Preguntas frecuentes</h2>
+        <div style="margin-top: 10px">
+          <div class="item">
+            <div class="q">
+              <strong>¿...?</strong><span class="toggle">+</span>
+            </div>
+            <div class="a">[...]</div>
+          </div>
+          <div class="item">
+            <div class="q">
+              <strong>¿Cuándo acudir a una consulta psicológica?</strong
+              ><span class="toggle">+</span>
+            </div>
+            <div class="a">
+              Cuando sientas malestar que afecta tu vida diaria, relaciones,
+              trabajo o salud física y emocional.
+            </div>
+          </div>
+          <div class="item">
+            <div class="q">
+              <strong>¿Qué trabajar en terapia?</strong
+              ><span class="toggle">+</span>
+            </div>
+            <div class="a">
+              En terapia se puede trabajar cualquier conflicto, desde malestares
+              leves hasta problemas complejos: ansiedad, depresión, duelos,
+              traumas, etc.
+            </div>
+          </div>
+        </div>
+      </section>
 
-<aside>
-<div class="card">
-<strong>Office</strong>
-<p style="margin:6px 0;color:var(--muted)">123 Health St, Suite 200 — Your City</p>
-<p style="margin:6px 0;color:var(--muted)">Hours: Mon–Fri 9:00–18:00</p>
-<p style="margin:6px 0;color:var(--muted)">Telehealth available across state lines where licensed.</p>
-</div>
+      <!-- Contacto -->
+      <section id="contacto">
+        <h2>Reservá tu primera consulta</h2>
+        <div
+          class="card"
+          style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center"
+        >
+          <div style="flex: 1; min-width: 220px">
+            <p>
+              <strong>Teléfono:</strong>
+              <a href="tel:+5493644401297">(364) 4401297</a>
+            </p>
+            <p>
+              <strong>E-mail:</strong>
+              <a href="mailto:florenciamedina@gmail.com"
+                >florenciamedina@gmail.com</a
+              >
+            </p>
+            <p><strong>Dirección:</strong> Av. Emilio Olmos 185</p>
+          </div>
+          <form style="flex: 1; min-width: 240px" onsubmit="handleForm(event)">
+            <label style="display: block; margin-bottom: 8px">Nombre</label>
+            <input
+              name="name"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid #e6e9ef;
+                margin-bottom: 8px;
+              "
+            />
+            <label style="display: block; margin-bottom: 8px"
+              >E-mail o teléfono</label
+            >
+            <input
+              name="contact"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid #e6e9ef;
+                margin-bottom: 8px;
+              "
+            />
+            <label style="display: block; margin-bottom: 8px"
+              >Mensaje (motivo de consulta)</label
+            >
+            <textarea
+              name="message"
+              rows="3"
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid #e6e9ef;
+                margin-bottom: 8px;
+              "
+            ></textarea>
+            <button
+              type="submit"
+              class="cta"
+              style="border: none; cursor: pointer"
+            >
+              Enviar consulta
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
 
+    <footer>
+      <div class="container">
+        <div>
+          Todos los derechos reservados © <span id="year"></span> · Matrícula
+          profesional MP
+        </div>
+      </div>
+    </footer>
 
-<div class="card" style="margin-top:12px">
-<strong>Insurance & Fees</strong>
-<p style="color:var(--muted);margin:6px 0">I accept private pay and select insurers. Sliding scale available — contact for details.</p>
-</div>
-</aside>
+    <script>
+      // set year
+      document.getElementById("year").textContent = new Date().getFullYear();
 
+      // FAQ accordion
+      document.querySelectorAll(".faq .item").forEach(function (it) {
+        var q = it.querySelector(".q");
+        var a = it.querySelector(".a");
+        q.addEventListener("click", function () {
+          var opened = a.style.maxHeight && a.style.maxHeight !== "0px";
+          document.querySelectorAll(".faq .a").forEach(function (x) {
+            x.style.maxHeight = null;
+            x.previousElementSibling.querySelector(".toggle").textContent = "+";
+          });
+          if (!opened) {
+            a.style.maxHeight = a.scrollHeight + "px";
+            q.querySelector(".toggle").textContent = "-";
+          }
+        });
+      });
 
-</div>
-</section>
-
-
-<section id="testimonials" style="margin-top:28px">
-<h2>What clients say</h2>
-<div class="card" style="padding:18px">"Helpful, compassionate, and practical — I felt better within weeks." — A. Patient (testimonial used with permission)</div>
-</section>
-
-
-<section id="faq" style="margin-top:28px">
-<h2>FAQ</h2>
-<div class="card" style="padding:18px">
-<p><strong>How do I prepare for my first session?</strong> Bring a list of goals & medications; we'll review history and create a treatment plan.</p>
-</div>
-</section>
-
-
-</main>
-
-
-<footer>
-<div style="max-width:960px;margin:0 auto;padding:0 18px">
-<small>© <span id="year"></span> Dr. Jane Doe — License #123456. <a href="#privacy">Privacy & data use</a></small>
-</div>
-</footer>
-
-
-<script>
-// small helpers: replace or connect to real form handlers and analytics
-document.getElementById('year').textContent = new Date().getFullYear();
-function validateForm(e){
-// add custom validation or integrate with booking system
-return true;
-}
-</script>
-
-
-<!--
-Next steps (developer checklist):
-- Replace placeholder images and text.
-- Connect the form to a secure endpoint (Formspree, Netlify Forms, or your server) and ensure TLS.
-- Add JSON-LD structured data for Person/LocalBusiness.
-- Add analytics & conversion tracking, and configure privacy/cookie banner.
-- Test on mobile, run Lighthouse for performance & accessibility.
-- Deploy to a host (Netlify, Vercel, GitHub Pages) or move into a CMS.
--->
-</body>
+      // simple form handler - replace with your backend or email service
+      function handleForm(e) {
+        e.preventDefault();
+        var data = new FormData(e.target);
+        var name = data.get("name");
+        var contact = data.get("contact");
+        var message = data.get("message");
+        // This just opens the user's email client prefilled (no server). Change as needed.
+        var subject = encodeURIComponent(
+          "Consulta desde web - " + (name || "Sin nombre")
+        );
+        var body = encodeURIComponent(
+          "Nombre: " +
+            name +
+            "\nContacto: " +
+            contact +
+            "\n\nMensaje:\n" +
+            message
+        );
+        window.location.href =
+          "mailto:lic_eugeniaduarte@yahoo.com.ar?subject=" +
+          subject +
+          "&body=" +
+          body;
+      }
+    </script>
+  </body>
 </html>
+
