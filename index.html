@@ -15,18 +15,42 @@
       rel="stylesheet"
     />
     <style>
-      /* Simple, modern CSS inspired by psicologa.com.ar */
+      /* Form fields */
+      input, textarea {
+        background-color: #e1cfe9;
+        border: 1px solid #000000;
+        color: #111;
+      }
+
+      /* Logo image */
+      .logo-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        object-fit: cover;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      /* Pop effect on hover */
+      .logo-img:hover {
+        transform: scale(1.15);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Global variables */
       :root {
-        --accent: #6b46c1; /* purple */
+        --accent: #6b46c1;
         --muted: #6b7280;
         --max-width: 1100px;
         --radius: 14px;
         font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
           "Helvetica Neue", Arial;
       }
+
       * {
         box-sizing: border-box;
       }
+
       body {
         margin: 0;
         color: #111;
@@ -37,7 +61,7 @@
       .container {
         max-width: var(--max-width);
         margin: 0 auto;
-        padding: 24px;
+        padding: 8px;
       }
 
       header {
@@ -47,28 +71,20 @@
         z-index: 40;
         border-bottom: 1px solid #eef2f7;
       }
+
       .topbar {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 12px 24px;
       }
+
       .brand {
         display: flex;
         align-items: center;
         gap: 12px;
       }
-      .brand .logo {
-        width: 52px;
-        height: 52px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, var(--accent), #9f7aea);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-weight: 700;
-      }
+
       nav ul {
         display: flex;
         gap: 18px;
@@ -76,11 +92,13 @@
         margin: 0;
         padding: 0;
       }
+
       nav a {
         color: var(--muted);
         text-decoration: none;
         font-weight: 600;
       }
+
       .cta {
         background: var(--accent);
         color: #fff;
@@ -89,9 +107,9 @@
         text-decoration: none;
       }
 
-      /* Hero */
+      /* Hero section */
       .hero {
-        background: #fff;
+        background: #ffffff;
         margin: 20px 0;
         padding: 28px;
         border-radius: var(--radius);
@@ -100,67 +118,58 @@
         gap: 28px;
         align-items: center;
       }
+
       .hero h1 {
         margin: 0;
         font-size: 28px;
       }
+
       .hero h2 {
         margin: 6px 0 18px;
         color: var(--muted);
         font-weight: 500;
       }
+
       .hero p {
         margin: 0;
         color: #334155;
       }
-      .hero .contact {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .contact a {
-        display: inline-block;
-        text-decoration: none;
-        padding: 10px 12px;
-        border-radius: 10px;
-        border: 1px solid #e6e9ef;
-      }
 
-      /* Sections */
       section {
         margin: 18px 0;
       }
+
       .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
       }
+
       .card {
-        background: #fff;
+        background: #ffffff;
         padding: 16px;
         border-radius: 12px;
-        border: 1px solid #eef2f7;
+        border: 1px solid #ffffff;
       }
-      .card h3 {
-        margin: 0 0 8px;
-      }
+
       .faq .item {
-        background: #fff;
+        background: #ffffff;
         padding: 12px;
         border-radius: 10px;
         border: 1px solid #eef2f7;
         margin-bottom: 8px;
       }
+
       .faq .q {
         display: flex;
         justify-content: space-between;
         cursor: pointer;
       }
+
       .faq .a {
         max-height: 0;
         overflow: hidden;
         transition: all 0.28s ease;
-        padding-top: 0;
       }
 
       footer {
@@ -168,7 +177,23 @@
         color: var(--muted);
         text-align: center;
       }
+      .whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
       /* Responsive */
       @media (max-width: 980px) {
         .hero {
@@ -178,6 +203,7 @@
           grid-template-columns: repeat(2, 1fr);
         }
       }
+
       @media (max-width: 640px) {
         nav ul {
           display: none;
@@ -185,23 +211,19 @@
         .grid {
           grid-template-columns: 1fr;
         }
-        .brand .logo {
-          width: 44px;
-          height: 44px;
-        }
       }
     </style>
   </head>
+
   <body>
+    <!-- Header -->
     <header>
       <div class="container topbar">
         <div class="brand">
-          <div class="logo">FM</div>
+          <img src="logo2.jpg" alt="Logo de Florencia Medina" class="logo-img">
           <div>
-            <div style="font-weight: 700">Florencia Medina</div>
-            <div style="font-size: 13px; color: var(--muted)">
-              Lic. en Psicología — MP -
-            </div>
+            <div style="font-weight:700">Florencia Medina</div>
+            <div style="font-size:13px;color:var(--muted)">Lic. en Psicología — MP 15337</div>
           </div>
         </div>
         <nav>
@@ -209,56 +231,43 @@
             <li><a href="#sobre">Sobre mí</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#faq">Preguntas frecuentes</a></li>
-            <li><a href="#consultorio">Consultorio</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </nav>
         <div>
-          <a class="cta" href="tel:+543516416699">(364) 440-1297</a>
+          <a class="cta" href="https://wa.me/5493644401297" target="_blank">WhatsApp</a>
         </div>
       </div>
     </header>
 
+    <!-- Main content -->
     <main class="container">
       <!-- Hero -->
       <section class="hero" aria-labelledby="hero-title">
         <div>
           <h1 id="hero-title">Florencia Medina — Licenciada en Psicología</h1>
-          <h2>[Descripcion Corta]</h2>
+          <h2>[Descripción corta]</h2>
           <p>
             Soy licenciada en Psicología, egresada de la Universidad Nacional de
-            Córdoba [...]
+            Córdoba [...]. 
           </p>
 
-          <div
-            style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap"
-          >
+          <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
             <a class="cta" href="#contacto">Reservá tu turno</a>
-            <a
-              href="mailto:lic_eugeniaduarte@yahoo.com.ar"
-              style="
-                padding: 10px 12px;
-                border-radius: 10px;
-                border: 1px solid #e6e9ef;
-                text-decoration: none;
-                color: #111;
-              "
-              >Enviar consulta</a
-            >
+            <a href="mailto:psi.florenciamedina@gmail.com" style="
+              padding: 10px 12px;
+              border-radius: 10px;
+              border: 1px solid #000000;
+              text-decoration: none;
+              color: #111;
+            ">Enviar consulta</a>
           </div>
         </div>
 
-        <aside
-          style="
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-items: center;
-          "
-        >
+        <aside style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
           <img
-            src="https://media.discordapp.net/attachments/695403068707176462/1430333539106295979/file.jpg?ex=68f9656a&is=68f813ea&hm=2902d5416c077a3ba1eca0b82111dfbf879732d5099a24c50c99cfbe13c17c57&=&format=webp"
-            alt="florencia medina psicologa turnos online"
+            src="flopy.png"
+            alt="Florencia Medina psicóloga turnos online"
             style="
               width: 100%;
               border-radius: 12px;
@@ -267,29 +276,23 @@
               border: 1px solid #eef2f7;
             "
           />
-          <div
-            style="width: 100%; display: flex; flex-direction: column; gap: 8px"
-          >
-            <div
-              style="
-                background: #fff;
-                padding: 10px;
-                border-radius: 10px;
-                border: 1px solid #eef2f7;
-                text-align: center;
-              "
-            >
+          <div style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
+            <div style="
+              background: #fff;
+              padding: 10px;
+              border-radius: 10px;
+              border: 1px solid #000000;
+              text-align: center;
+            ">
               Consultorio online
             </div>
-            <div
-              style="
-                background: #fff;
-                padding: 10px;
-                border-radius: 10px;
-                border: 1px solid #eef2f7;
-                text-align: center;
-              "
-            >
+            <div style="
+              background: #fff;
+              padding: 10px;
+              border-radius: 10px;
+              border: 1px solid #000000;
+              text-align: center;
+            ">
               Google Meet · Zoom · WhatsApp
             </div>
           </div>
@@ -314,19 +317,17 @@
           <div class="card">
             <h3>Psicodiagnóstico</h3>
             <p>
-              Aplicación de pruebas psicométricas y proyectivas para evaluación
-              integral.
+              Aplicación de pruebas psicométricas y proyectivas para evaluación integral.
             </p>
           </div>
           <div class="card">
             <h3>Psicoterapia</h3>
-            <p>Terapia focalizada en el motivo de consulta</p>
+            <p>Terapia focalizada en el motivo de consulta.</p>
           </div>
           <div class="card">
             <h3>Abordaje interdisciplinario</h3>
             <p>
-              Derivaciones a psiquiatría, nutrición, médico clínico y trabajo
-              conjunto cuando es necesario.
+              Derivaciones a psiquiatría, nutrición, médico clínico y trabajo conjunto cuando es necesario.
             </p>
           </div>
         </div>
@@ -337,26 +338,14 @@
         <h2>Preguntas frecuentes</h2>
         <div style="margin-top: 10px">
           <div class="item">
-            <div class="q">
-              <strong>¿...?</strong><span class="toggle">+</span>
-            </div>
-            <div class="a">[...]</div>
-          </div>
-          <div class="item">
-            <div class="q">
-              <strong>¿Cuándo acudir a una consulta psicológica?</strong
-              ><span class="toggle">+</span>
-            </div>
+            <div class="q"><strong>¿Cuándo acudir a una consulta psicológica?</strong><span class="toggle">+</span></div>
             <div class="a">
               Cuando sientas malestar que afecta tu vida diaria, relaciones,
               trabajo o salud física y emocional.
             </div>
           </div>
           <div class="item">
-            <div class="q">
-              <strong>¿Qué trabajar en terapia?</strong
-              ><span class="toggle">+</span>
-            </div>
+            <div class="q"><strong>¿Qué trabajar en terapia?</strong><span class="toggle">+</span></div>
             <div class="a">
               En terapia se puede trabajar cualquier conflicto, desde malestares
               leves hasta problemas complejos: ansiedad, depresión, duelos,
@@ -369,87 +358,34 @@
       <!-- Contacto -->
       <section id="contacto">
         <h2>Reservá tu primera consulta</h2>
-        <div
-          class="card"
-          style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center"
-        >
+        <div class="card" style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center">
           <div style="flex: 1; min-width: 220px">
-            <p>
-              <strong>Teléfono:</strong>
-              <a href="tel:+5493644401297">(364) 4401297</a>
-            </p>
-            <p>
-              <strong>E-mail:</strong>
-              <a href="mailto:florenciamedina@gmail.com"
-                >florenciamedina@gmail.com</a
-              >
-            </p>
-            <p><strong>Dirección:</strong> Av. Emilio Olmos 185</p>
+            <p><strong>Teléfono:</strong> <a href="tel:+5493644401297">(364) 4401297</a></p>
+            <p><strong>E-mail:</strong> <a href="mailto:psi.florenciamedina@gmail.com">psi.florenciamedina@gmail.com</a></p>
+            <p><strong>Dirección:</strong> Av. Emilio Olmos 134</p>
           </div>
           <form style="flex: 1; min-width: 240px" onsubmit="handleForm(event)">
-            <label style="display: block; margin-bottom: 8px">Nombre</label>
-            <input
-              name="name"
-              required
-              style="
-                width: 100%;
-                padding: 10px;
-                border-radius: 8px;
-                border: 1px solid #e6e9ef;
-                margin-bottom: 8px;
-              "
-            />
-            <label style="display: block; margin-bottom: 8px"
-              >E-mail o teléfono</label
-            >
-            <input
-              name="contact"
-              required
-              style="
-                width: 100%;
-                padding: 10px;
-                border-radius: 8px;
-                border: 1px solid #e6e9ef;
-                margin-bottom: 8px;
-              "
-            />
-            <label style="display: block; margin-bottom: 8px"
-              >Mensaje (motivo de consulta)</label
-            >
-            <textarea
-              name="message"
-              rows="3"
-              style="
-                width: 100%;
-                padding: 10px;
-                border-radius: 8px;
-                border: 1px solid #e6e9ef;
-                margin-bottom: 8px;
-              "
-            ></textarea>
-            <button
-              type="submit"
-              class="cta"
-              style="border: none; cursor: pointer"
-            >
-              Enviar consulta
-            </button>
+            <label>Nombre</label>
+            <input name="name" required style="width: 100%; padding: 10px; border-radius: 8px; margin-bottom: 8px;" />
+            <label>E-mail o teléfono</label>
+            <input name="contact" required style="width: 100%; padding: 10px; border-radius: 8px; margin-bottom: 8px;" />
+            <label>Mensaje (motivo de consulta)</label>
+            <textarea name="message" rows="3" style="width: 100%; padding: 10px; border-radius: 8px; margin-bottom: 8px;"></textarea>
+            <button type="submit" class="cta" style="border: none; cursor: pointer">Enviar consulta</button>
           </form>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <div class="container">
-        <div>
-          Todos los derechos reservados © <span id="year"></span> · Matrícula
-          profesional MP
-        </div>
+        <div>Todos los derechos reservados © <span id="year"></span> · Matrícula profesional MP</div>
       </div>
     </footer>
 
+    <!-- Script -->
     <script>
-      // set year
       document.getElementById("year").textContent = new Date().getFullYear();
 
       // FAQ accordion
@@ -469,32 +405,17 @@
         });
       });
 
-      // simple form handler - replace with your backend or email service
+      // Form handler
       function handleForm(e) {
         e.preventDefault();
         var data = new FormData(e.target);
         var name = data.get("name");
         var contact = data.get("contact");
         var message = data.get("message");
-        // This just opens the user's email client prefilled (no server). Change as needed.
-        var subject = encodeURIComponent(
-          "Consulta desde web - " + (name || "Sin nombre")
-        );
-        var body = encodeURIComponent(
-          "Nombre: " +
-            name +
-            "\nContacto: " +
-            contact +
-            "\n\nMensaje:\n" +
-            message
-        );
-        window.location.href =
-          "mailto:lic_eugeniaduarte@yahoo.com.ar?subject=" +
-          subject +
-          "&body=" +
-          body;
+        var subject = encodeURIComponent("Consulta desde web - " + (name || "Sin nombre"));
+        var body = encodeURIComponent("Nombre: " + name + "\nContacto: " + contact + "\n\nMensaje:\n" + message);
+        window.location.href = "mailto:florenciamedina@gmail.com?subject=" + subject + "&body=" + body;
       }
     </script>
   </body>
 </html>
-
