@@ -6,7 +6,6 @@
 <title>Florencia Medina | Psicóloga en Córdoba | Terapia Online</title>
 <meta name="description" content="Lic. Florencia Medina, Psicóloga en Córdoba. Terapia online a todo el mundo. Atención empática y profesional en ansiedad, autoestima, duelos y más.">
 
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -686,6 +685,22 @@ Si alguna de estas situaciones se te hace conocida, es probable que te resulte b
 
    
     </main>
+    <script>
+function handleForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value.trim();
+  const contact = form.contact.value.trim();
+  const message = form.message.value.trim();
+
+  const subject = encodeURIComponent("Consulta desde el sitio web - " + name);
+  const body = encodeURIComponent(
+    `Nombre: ${name}\nContacto: ${contact}\n\nMensaje:\n${message}`
+  );
+
+  window.location.href = `mailto:psi.florenciamedina@gmail.com?subject=${subject}&body=${body}`;
+}
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const questions = document.querySelectorAll(".faq-question");
@@ -714,8 +729,8 @@ Si alguna de estas situaciones se te hace conocida, es probable que te resulte b
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector("#opiniones .slider");
-    const leftBtn = document.querySelector("#opiniones .arrow.left");
-    const rightBtn = document.querySelector("#opiniones .arrow.right");
+    const leftBtn = document.querySelector("# .arrow.left");
+    const rightBtn = document.querySelector("# .arrow.right");
     const scrollStep = 320; // pixels to move per click
 
     if (slider && leftBtn && rightBtn) {
