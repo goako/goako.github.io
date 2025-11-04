@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Florencia Medina — Psicóloga</title>
-    <meta
-      name="description"
-      content="Psicóloga. Terapia presencial y online. EMDR, Gestalt y psicodiagnóstico. Reservá tu turno."
+<title>Florencia Medina | Psicóloga en Córdoba | Terapia Online</title>
+<meta name="description" content="Lic. Florencia Medina, Psicóloga en Córdoba. Terapia online a todo el mundo. Atención empática y profesional en ansiedad, autoestima, duelos y más.">
+
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +13,57 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- 🔍 SEO & Social Meta Tags -->
+<title>Florencia Medina | Psicóloga en Córdoba | Terapia Online y Presencial</title>
+<meta name="description" content="Lic. Florencia Medina, Psicóloga en Córdoba. Terapia online a todo el mundo. Espacio de acompañamiento profesional, empático y cuidado para tu bienestar emocional.">
+
+<!-- Keywords (optional, for clarity — Google ignores it, but others use it) -->
+<meta name="keywords" content="psicóloga Córdoba, terapia online, psicoterapia, salud mental, terapia individual, ansiedad, autoestima, duelo">
+
+<!-- Open Graph (Facebook, Instagram, WhatsApp previews) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Florencia Medina | Psicóloga en Córdoba | Terapia Online y Presencial">
+<meta property="og:description" content="Espacio terapéutico profesional y empático. Atención online y presencial para tu bienestar emocional.">
+<meta property="og:image" content="https://goako.github.io/flopy.png">
+<meta property="og:url" content="https://goako.github.io">
+<meta property="og:locale" content="es_AR">
+
+<!-- Twitter Card (for sharing previews) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Florencia Medina | Psicóloga en Córdoba | Terapia Online y Presencial">
+<meta name="twitter:description" content="Terapia profesional, online y presencial. Espacio de contención y escucha desde la empatía.">
+<meta name="twitter:image" content="https://goako.github.io/flopy.png">
+
+<!-- Favicon -->
+<link rel="icon" href="logo2.jpg" type="image/jpeg">
+
+<!-- Canonical URL (avoid duplicate URLs) -->
+<link rel="canonical" href="https://goako.github.io"> 
+
+<!-- 📍 Schema.org JSON-LD for Google Knowledge Panel -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Psychologist",
+  "name": "Lic. Florencia Medina",
+  "image": "https://goako.github.io/flopy.png",
+  "description": "Psicóloga en Córdoba. Terapia online y presencial. Espacio terapéutico de contención, atención y escucha, desde la empatía y el cuidado.",
+  "url": "https://goako.github.io",
+  "telephone": "+5493644401297",
+  "email": "psi.florenciamedina@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Emilio Olmos 185",
+    "addressLocality": "Córdoba",
+    "addressRegion": "Córdoba",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://www.instagram.com/psi.florenciamedina", 
+    "https://wa.me/5493644401297"
+  ]
+}
+</script>
     <style>
       /* Form fields */
       input, textarea {
@@ -21,30 +71,6 @@
         border: 1px solid #000000;
         color: #111;
       }
-      .instagram-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 10px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.instagram-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.instagram-logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: white;
-  padding: 4px;
-}
 
       /* Logo image */
       .logo-img {
@@ -176,48 +202,193 @@
         border: 1px solid #ffffff;
       }
 
-      .faq .item {
-        background: #ffffff;
-        padding: 12px;
-        border-radius: 10px;
-        border: 1px solid #eef2f7;
-        margin-bottom: 8px;
-      }
+      .faq-item {
+  margin-bottom: 10px;
+}
 
-      .faq .q {
-        display: flex;
-        justify-content: space-between;
-        cursor: pointer;
-      }
+.faq-question {
+  width: 100%;
+  background-color: #f3e8ff;
+  color: #4b0082;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
 
-      .faq .a {
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.28s ease;
-      }
+.faq-question:hover {
+  background-color: #e6d0ff;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 14px;
+  background-color: #fafafa;
+  border-left: 3px solid #c084fc;
+  border-radius: 0 0 8px 8px;
+}
 
       footer {
         padding: 28px 0;
         color: var(--muted);
         text-align: center;
       }
+
       .whatsapp-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: #25D366; /* WhatsApp green */
-  color: white;
-  padding: 10px 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background-color: #25D366; /* WhatsApp green */
+        color: white;
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .whatsapp-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+
+      /* === Opiniones Slider === */
+      .reviews-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .slider {
+        display: flex;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        gap: 24px;
+        scroll-behavior: smooth;
+        padding: 10px 20px;
+        width: 100%;
+      }
+
+      .review {
+        flex: 0 0 280px;
+        scroll-snap-align: center;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: left;
+      }
+
+      .review:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      }
+
+      .review p {
+        font-style: italic;
+        color: #444;
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .review strong {
+        display: block;
+        text-align: right;
+        color: #6b46c1;
+        font-weight: 600;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #6b46c1; /* your purple accent */
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        z-index: 10;
+      }
+
+      .arrow:hover {
+        background: #553c9a;
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+#faq {
+  background: linear-gradient(180deg, #f8f5ff 0%, #f3e8ff 100%);
 }
 
-.whatsapp-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+#faq .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  color: #4b0082;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  padding: 18px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #f3e8ff;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 18px 18px 18px;
+  color: #333;
+  line-height: 1.6;
+  border-top: 1px solid #eee;
+}
+      .arrow.left {
+        left: -20px;
+      }
+
+      .arrow.right {
+        right: -20px;
+      }
+
+      .slider::-webkit-scrollbar {
+        display: none;
+      }
+
       /* Responsive */
       @media (max-width: 980px) {
         .hero {
@@ -227,7 +398,11 @@
           grid-template-columns: repeat(2, 1fr);
         }
       }
-
+@media (max-width: 640px) {
+  header {
+    display: none;
+  }
+}
       @media (max-width: 640px) {
         nav ul {
           display: none;
@@ -254,13 +429,13 @@
           <ul>
             <li><a href="#sobre">Sobre mí</a></li>
             <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#opiniones">Opiniones</a></li>
             <li><a href="#faq">Preguntas frecuentes</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </nav>
         <div>
-          <a class="cta" href="https://wa.me/5493644401297?text=Hola%20Florencia,%20quiero%20reservar%20una%20consulta
-" target="_blank">WhatsApp</a>
+          <a class="cta" href="https://wa.me/5493644401297?text=Hola%20Florencia,%20quiero%20reservar%20una%20consulta" target="_blank">Contactame</a>
         </div>
       </div>
     </header>
@@ -270,11 +445,13 @@
       <!-- Hero -->
       <section class="hero" aria-labelledby="hero-title">
         <div>
-          <h1 id="hero-title">Florencia Medina</h1>
-          <h1 id="hero-title">Licenciada en Psicología</h1>
-          <h2>[Descripción corta]</h2>
+          <h1 id="hero-title"><p> Florencia Medina</p> Licenciada en Psicología</h1>
+          <h2>Te ofrezco un espacio terapéutico de contención, atención y escucha, desde la empatía y el cuidado.</h2>
+          <p>
+          ¡No dudes en contactarme por cualquier consulta!
+          </p>
 
-          <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
+           <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
             <a class="cta" href="#contacto">Reservá tu turno</a>
             <a class="whatsapp-btn" 
    href="https://wa.me/5493644401297?text=Hola%20Florencia,%20quiero%20consultar%20sobre%20una%20sesión" 
@@ -290,7 +467,7 @@
         <aside style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
           <img
             src="flopy.png"
-            alt="Florencia Medina psicóloga turnos online"
+            alt="Florencia Medina, psicóloga especialista en terapia online a todo el mundo"
             style="
               width: 100%;
               border-radius: 12px;
@@ -299,31 +476,42 @@
               border: 1px solid #eef2f7;
             "
           />
-<a href="https://www.instagram.com/psi.florenciamedina" target="_blank" class="instagram-card">
-  <div>
-    <h3>Seguime en Instagram</h3>
-  </div>
-
-</a>
+          <a href="https://www.instagram.com/tuusuario" target="_blank" class="instagram-card" style="
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 10px;
+          ">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" 
+                 alt="Instagram" style="width: 32px; height: 32px;">
+            <div>
+              <h3 style="margin: 0; font-size: 16px;">Seguime en Instagram</h3>
             </div>
-            <div style="
-              background: #fff;
-              padding: 10px;
-              border-radius: 10px;
-              border: 1px solid #000000;
-              text-align: center;
-            ">
-              Google Meet · Zoom · WhatsApp
-            </div>
-          </div>
+          </a>
         </aside>
       </section>
+      
+    </a>
+
 
       <!-- Sobre mí -->
       <section id="sobre">
         <h2>Sobre mí</h2>
         <div class="card" style="margin-top: 10px">
-          <p>Soy licenciada en Psicología [-------]</p>
+          <p>Me llamo Flor, soy psicóloga, me gustan mucho los mates y los gatos. 
+Estudié y me formé en la Universidad Nacional de Córdoba y realicé múltiples cursos y posgrados al terminar la licenciatura. Me apasiona la psicología y acompaño procesos terapéuticos con gran compromiso y amor.
+
+
+Te ofrezco un espacio de atención y escucha de manera profesional y comprometida, libre de juicios, desde la empatía, la ética profesional y el cuidado. 
+<p>Con respecto a mi formación profesional, considero la formación constante y la actualización profesional fundamentales para ofrecer la mejor atención a quienes confían en mí, su salud. Utilizo un abordaje integral, adaptando la terapia a las necesidades de cada consultante, manteniendo el enriquecimiento desde diversas corrientes de la Psicología.</p>
+
+
+Si llegaste hasta acá en busca de una psicoterapeuta, puedo ayudarte. Sé lo inquietante que puede ser comenzar terapia. Estoy a tu disposición para que transitemos juntos/as el enriquecedor proceso terapéutico de autonocimiento y aprendizaje. Podés escribirme por cualquier duda o consulta y me voy a poner en contacto con vos lo antes posible.
+</p>
           <p style="margin-top: 10px; font-size: 14px; color: var(--muted)">
             Formación: Universidad Nacional de Córdoba
           </p>
@@ -332,70 +520,191 @@
 
       <!-- Servicios -->
       <section id="servicios">
-        <h2>Mis servicios</h2>
+        <h2>En mis consultas</h2>
         <div class="grid" style="margin-top: 12px">
           <div class="card">
-            <h3>Psicodiagnóstico</h3>
+            <h3>Empatía</h3>
             <p>
-              Aplicación de pruebas psicométricas y proyectivas para evaluación integral.
+              Te ofrezco un espacio terapéutico de contención, atención y escucha, desde la empatía y el cuidado.
             </p>
           </div>
           <div class="card">
-            <h3>Psicoterapia</h3>
-            <p>Terapia focalizada en el motivo de consulta.</p>
+            <h3>Enfoque Integrativo</h3>
+            <p>Utilizo pensamiento crítico y enriquecimiento teórico - práctico desde diversas corrientes de la Psicología.</p>
           </div>
           <div class="card">
-            <h3>Abordaje interdisciplinario</h3>
+            <h3>Seriedad</h3>
             <p>
-              Derivaciones a psiquiatría, nutrición, médico clínico y trabajo conjunto cuando es necesario.
+Considero fundamental la formación constante y la actualización profesional para poder ofrecer la mejor atención a quienes confían en nosotros su salud.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- FAQ -->
-      <section id="faq" class="faq">
-        <h2>Preguntas frecuentes</h2>
-        <div style="margin-top: 10px">
-          <div class="item">
-            <div class="q"><strong>¿Cuándo acudir a una consulta psicológica?</strong><span class="toggle">+</span></div>
-            <div class="a">
-              Cuando sientas malestar que afecta tu vida diaria, relaciones,
-              trabajo o salud física y emocional.
-            </div>
-          </div>
-          <div class="item">
-            <div class="q"><strong>¿Qué trabajar en terapia?</strong><span class="toggle">+</span></div>
-            <div class="a">
-              En terapia se puede trabajar cualquier conflicto, desde malestares
-              leves hasta problemas complejos: ansiedad, depresión, duelos,
-              traumas, etc.
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Opiniones -->
 
-      <!-- Contacto -->
-      <section id="contacto">
-        <h2>Reservá tu primera consulta</h2>
-        <div class="card" style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center">
-          <div style="flex: 1; min-width: 220px">
-            <p><strong>Teléfono:</strong> <a href="tel:+5493644401297">(364) 4401297</a></p>
-            <p><strong>E-mail:</strong> <a href="mailto:psi.florenciamedina@gmail.com">psi.florenciamedina@gmail.com</a></p>
-            <p><strong>Dirección:</strong> Av. Emilio Olmos 134</p>
-          </div>
-          <form style="flex: 1; min-width: 240px" onsubmit="handleForm(event)">
-            <label>Nombre</label>
-            <input name="name" required style="width: 100%; padding: 10px; border-radius: 8px; margin-bottom: 8px;" />
-            <label>E-mail o teléfono</label>
-            <input name="contact" required style="width: 100%; padding: 10px; border-radius: 8px; margin-bottom: 8px;" />
-            <label>Mensaje (motivo de consulta)</label>
-            <textarea name="message" rows="3" style="width: 100%; padding: 10px; border-radius: 8px; margin-bottom: 8px;"></textarea>
-            <button type="submit" class="cta" style="border: none; cursor: pointer">Enviar consulta</button>
-          </form>
-        </div>
-      </section>
+      <section id="faq" style="padding: 60px 0;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom: 24px;">Preguntas Frecuentes</h2>
+  <div class="faq-item">
+    <button class="faq-question">¿Cómo es la modalidad de atención?</button>
+    <div class="faq-answer">
+      <p>Actualmente atiendo de forma virtual para todo el mundo 🌎</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">¿Cuándo empezar terapia?</button>
+    <div class="faq-answer">
+      <p>Hay muchos motivos para iniciar un proceso terapéutico, todos igual de válidos. Si ya estás pensando en iniciar terapia, es probable que haya algo en tu vida que requiere atención o cambio. Sin dudas que comenzar a reflexionar sobre lo que te pasa es un primer paso muy importante. 
+Si estás pasando por un momento difícil, por cambios en tu vida, por un proceso de duelo o ansiedad.
+Si tenés dificultades en tus vínculos (familia, pareja, amistades, trabajo).
+
+
+Si sentís que te cuesta poner límites o decir que no.
+
+
+Si te resulta difícil concentrarte o tomar decisiones.
+
+
+Si te gustaría conocerte mejor y entender tus emociones.
+
+
+Si sentís que tus herramientas se agotan ante las circunstancias de la vida o que la contención de tu entorno te es insuficiente.
+Si te abruman los pensamientos y no sabes cómo manejar tus emociones. 
+Si sentís que no estás viviendo en el presente o que ya no disfrutás de cosas que antes te proporcionaban placer.
+
+
+Si alguna de estas situaciones se te hace conocida, es probable que te resulte beneficioso iniciar terapia y yo puedo ayudarte
+</p>
+    </div>
+    </div>
+    
+    <div class="faq-item">
+    <button class="faq-question">¿Es para todas las edades?</button>
+    <div class="faq-answer">
+      <p>Si, no hay una edad demasiado joven o demasiado grande para hacer terapia.
+</p>
+    </div>
+    </div>
+         <div class="faq-item">
+    <button class="faq-question">¿Qué necesito para hacer terapia virtual? 
+
+</button>
+    <div class="faq-answer">
+      <p>Primero lo primero: Un dispositivo con conexión estable a internet (de preferencia, con cámara). Suelo recomendar el uso de auriculares con micrófono para poder escucharnos mejor y para mayor privacidad. Por último, un espacio cómodo, seguro y tranquilo.
+        Una parte fundamental de la terapia virtual es integrarla a la rutina, aprovechando que podemos elegir el lugar para participar de la sesión, por eso sentirse cómodo/a es indispensable.
+        También podés tener un cuaderno/hoja a mano y algo para anotar. Te recomiendo también tener agua a mano, pero si preferís tomar un té, café o un matecito, ¡también es buena idea! 
+        No olvides traer paciencia y predisposición para con vos mismo/a y con el proceso, recordá que estás cuidando tu salud mental.</p>
+    </div>
+  </div> 
+  
+    <div class="faq-item">
+    <button class="faq-question">¿Cómo es una primera sesión? 
+</button>
+    <div class="faq-answer">
+      <p>
+        Iniciar algo nuevo siempre genera ansiedad y miedo, incluso por más que ya hayas hecho terapia antes, comenzar un nuevo proceso terapéutico implica conocer a un/a nuevo/a terapeuta y dar lugar a un nuevo vínculo. Te cuento cómo es una primera sesión conmigo:</p>
+<p> Primero te voy a pedir algunos datos personales y te voy a hacer preguntas sobre tu vida para empezar a conocerte. (Tus vínculos, tu rutina, tus hábitos…)</p>
+<p>La idea es que sea una conversación, no un interrogatorio, por lo que sentite libre de profundizar en lo que consideres importante. </p>
+<p>También voy a preguntarte qué te trae por acá para que puedas contarme qué te anda pasando y cuál es tu motivo de consulta.</p>
+<p>¡Muy importante! Quiero saber sobre tus expectativas para con el proceso. Vos sos el protagonista, por lo que es fundamental saber qué esperás y cómo crees que puedo ayudarte.</p>
+<p>Por último, vamos a coordinar cómo vamos a trabajar. Esto incluye días, horarios y frecuencia de las sesiones. Te voy a proponer un plan de trabajo que vamos a ir adaptando y modificando según sea necesario. Recordá que es un trabajo en equipo y estamos juntos/as en esto. </p>
+ 
+
+</p>
+<div class="faq-answer">
+      <p>Primero lo primero:</p> un dispositivo con conexión estable a internet (de preferencia, con cámara). Suelo recomendar el uso de auriculares con micrófono para poder escucharnos mejor y para mayor privacidad. Por último, un espacio cómodo, seguro y tranquilo.
+        Una parte fundamental de la terapia virtual es integrarla a la rutina, aprovechando que podemos elegir el lugar para participar de la sesión, por eso sentirse cómodo/a es indispensable.
+        También podés tener un cuaderno/hoja a mano y algo para anotar. Te recomiendo también tener agua a mano, pero si preferís tomar un té, café o un matecito, ¡también es buena idea! 
+        No olvides traer paciencia y predisposición para con vos mismo/a y con el proceso, recordá que estás cuidando tu salud mental</p>
+    </div>
+  </div> 
+    </div>
+    <div class="faq-item">
+    <button class="faq-question">¿Qué trabajar en terapia?
+</button>
+    <div class="faq-answer">
+      <p>
+        Así como hay múltiples motivos para hacer terapia, de ellos va a depender lo que vamos a trabajar. Cada proceso es único y vamos a construirlo juntos/as. Mi objetivo es acompañarte de la mejor manera, vos vas a guiar el proceso y yo voy a brindarte mis conocimientos y herramientas de forma singular y personalizada. Además, siempre que sea necesario, voy a brindarte información actualizada y confiable, basada en evidencia acerca de lo que estemos trabajando, desde un enfoque psicoeducativo. 
+
+</p>
+</div>
+  </div>
+  </div>
+
+</p>
+    </div>
+  </div>
+
+
+<!-- Contacto -->
+<section id="contacto" style="padding: 60px 0;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom: 24px;">Reservá tu primera consulta</h2>
+
+    <div class="card" style="display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start;">
+      <!-- Contact info -->
+      <div style="flex: 1; min-width: 260px;">
+        <p style="font-size: 1.05rem; color: #333; line-height: 1.6;">
+          Si sentís que es momento de empezar a cuidar tu bienestar emocional, te invito a dar el primer paso.  
+          Podés escribirme para coordinar una primera entrevista o despejar cualquier duda.  
+          Cada encuentro está pensado como un espacio de confianza, empatía y acompañamiento profesional.
+        </p>
+
+        <p><strong>Teléfono:</strong> <a href="tel:+5493644401297">(364) 4401297</a></p>
+        <p><strong>E-mail:</strong> <a href="mailto:psi.florenciamedina@gmail.com">psi.florenciamedina@gmail.com</a></p>
+        <p><strong>Ubicación:</strong> Córdoba Capital · Atención virtual para todo el mundo 🌎</p>
+
+        <a href="https://wa.me/5493644401297?text=Hola%20Florencia,%20me%20gustaría%20consultar%20por%20una%20entrevista%20inicial."
+           target="_blank"
+           class="whatsapp-btn"
+           style="margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; background-color: #25D366; color: white; padding: 12px 18px; border-radius: 12px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: transform 0.2s ease;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 22px; height: 22px;">
+          Escribime por WhatsApp
+        </a>
+      </div>
+
+      <!-- Contact form -->
+      <form style="flex: 1; min-width: 280px;" onsubmit="handleForm(event)">
+        <label>Nombre</label>
+        <input name="name" required style="width: 100%; padding: 10px; border-radius: 8px; margin-bottom: 10px;" />
+
+        <label>E-mail o teléfono</label>
+        <input name="contact" required style="width: 100%; padding: 10px; border-radius: 8px; margin-bottom: 10px;" />
+
+        <label>Mensaje (motivo de consulta)</label>
+        <textarea name="message" rows="3" style="width: 100%; padding: 10px; border-radius: 8px; margin-bottom: 10px;"></textarea>
+
+        <button type="submit"
+                style="border: none; background-color: #6b46c1; color: white; font-weight: 600; padding: 12px 18px; border-radius: 10px; cursor: pointer; transition: background 0.3s ease;">
+          Enviar consulta por correo
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+   
     </main>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach((question) => {
+      question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        const isOpen = answer.style.display === "block";
+
+        // Close all answers first
+        document.querySelectorAll(".faq-answer").forEach((a) => (a.style.display = "none"));
+
+        // Toggle the clicked one
+        answer.style.display = isOpen ? "none" : "block";
+      });
+    });
+  });
+</script>
 
     <!-- Footer -->
     <footer>
@@ -403,7 +712,26 @@
         <div>Todos los derechos reservados © <span id="year"></span> · Matrícula profesional MP</div>
       </div>
     </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector("#opiniones .slider");
+    const leftBtn = document.querySelector("#opiniones .arrow.left");
+    const rightBtn = document.querySelector("#opiniones .arrow.right");
+    const scrollStep = 320; // pixels to move per click
 
+    if (slider && leftBtn && rightBtn) {
+      leftBtn.addEventListener("click", () => {
+        slider.scrollBy({ left: -scrollStep, behavior: "smooth" });
+      });
+
+      rightBtn.addEventListener("click", () => {
+        slider.scrollBy({ left: scrollStep, behavior: "smooth" });
+      });
+    } else {
+      console.error("❌ Opiniones slider elements not found.");
+    }
+  });
+</script>
     <!-- Script -->
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
@@ -425,17 +753,3 @@
         });
       });
 
-      // Form handler
-      function handleForm(e) {
-        e.preventDefault();
-        var data = new FormData(e.target);
-        var name = data.get("name");
-        var contact = data.get("contact");
-        var message = data.get("message");
-        var subject = encodeURIComponent("Consulta desde web - " + (name || "Sin nombre"));
-        var body = encodeURIComponent("Nombre: " + name + "\nContacto: " + contact + "\n\nMensaje:\n" + message);
-        window.location.href = "mailto:psi.florenciamedina@gmail.com?subject=" + subject + "&body=" + body;
-      }
-    </script>
-  </body>
-</html>
