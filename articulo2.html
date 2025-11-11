@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Construir autoestima: un camino hacia el bienestar | Blog - Florencia
+      Medina
+    </title>
+    <meta
+      name="description"
+      content="Reflexiones y estrategias para fortalecer la autoestima y cultivar una relación más sana con vos mismo. Por Lic. Florencia Medina."
+    />
+    <meta
+      name="keywords"
+      content="autoestima, psicología, bienestar, autoconfianza, salud mental, terapia online"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="logo2.jpg" type="image/jpeg" />
+
+    <style>
+      :root {
+        --accent: #6b46c1;
+        --muted: #6b7280;
+        --radius: 14px;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+
+      body {
+        margin: 0;
+        color: #111;
+        background: linear-gradient(180deg, #f3e8ff, #a78bfa);
+        line-height: 1.6;
+      }
+
+      header {
+        background: #fff;
+        border-bottom: 1px solid #eef2f7;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 18px;
+        list-style: none;
+        padding: 0;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .cta {
+        background: var(--accent);
+        color: white;
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      .blog-article {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 40px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-top: 40px;
+      }
+
+      .blog-article h1 {
+        color: #4b0082;
+      }
+
+      .blog-article h2 {
+        color: #6b46c1;
+        margin-top: 28px;
+      }
+
+      .blog-article p {
+        color: #333;
+        margin-bottom: 16px;
+      }
+      .logo-link img {
+        transition: transform 0.25s ease;
+      }
+      .logo-link:hover img {
+        transform: scale(1.07);
+      }
+      .back-btn {
+        display: inline-block;
+        margin-top: 30px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      footer {
+        padding: 28px 0;
+        color: var(--muted);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div
+        class="container topbar"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 24px;
+        "
+      >
+        <!-- Brand (fixed clickable logo + name, keeps header alignment) -->
+        <div
+          class="brand"
+          style="display: flex; align-items: center; gap: 12px"
+        >
+          <!-- clickable logo -->
+          <a
+            href="index3.html"
+            class="logo-link"
+            style="display: inline-block; line-height: 0"
+          >
+            <img
+              src="logo2.jpg"
+              alt="Logo de Florencia Medina"
+              class="logo-img"
+              style="
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+                object-fit: cover;
+              "
+            />
+          </a>
+
+          <!-- clickable name text -->
+          <div
+            class="brand-text"
+            style="display: flex; flex-direction: column; line-height: 1"
+          >
+            <a
+              href="index3.html"
+              style="
+                text-decoration: none;
+                color: inherit;
+                font-weight: 700;
+                font-size: 16px;
+              "
+              >Florencia Medina</a
+            >
+            <div style="font-size: 13px; color: var(--muted)">
+              Lic. en Psicología — MP 15337
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <ul
+            style="
+              display: flex;
+              gap: 18px;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            "
+          >
+            <li>
+              <a
+                href="index3.html#sobre"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Sobre mí</a
+              >
+            </li>
+            <li>
+              <a
+                href="index3.html#servicios"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                href="index3.html#faq"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Preguntas frecuentes</a
+              >
+            </li>
+            <li>
+              <a
+                href="index3.html#contacto"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Call to action button -->
+        <a
+          class="cta"
+          href="https://wa.me/5493644401297?text=Hola%20Florencia,%20quiero%20reservar%20una%20consulta"
+          target="_blank"
+          style="
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+          "
+        >
+          Contactame
+        </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="blog-article">
+        <h1>Construir autoestima: un camino hacia el bienestar</h1>
+        <p>
+          La autoestima no se trata solo de “sentirse bien con uno mismo”. Es
+          una construcción diaria que tiene que ver con la forma en que nos
+          tratamos, los pensamientos que cultivamos y cómo nos acompañamos en
+          los momentos difíciles.
+        </p>
+
+        <h2>La importancia de reconocerse</h2>
+        <p>
+          Fortalecer la autoestima comienza con reconocer nuestro valor más allá
+          de los logros. Aprender a validar nuestras emociones, necesidades y
+          límites nos ayuda a construir una relación más sana con nosotros
+          mismos.
+        </p>
+
+        <h2>Pequeños pasos para fortalecerla</h2>
+        <p>
+          💜 <strong>Practicá la gratitud personal:</strong> reconocé lo que
+          hacés bien, incluso lo más pequeño.
+        </p>
+        <p>
+          💜 <strong>Cuestioná el diálogo interno:</strong> transformá la
+          autocrítica en autocompasión.
+        </p>
+        <p>
+          💜 <strong>Rodéate de vínculos nutritivos:</strong> las personas que
+          te respetan y te inspiran refuerzan tu autoestima.
+        </p>
+
+        <h2>Un proceso continuo</h2>
+        <p>
+          Construir autoestima no es un destino, sino un proceso. Hay días más
+          difíciles, y está bien. Lo importante es seguir eligiendo acompañarte
+          desde el respeto y la paciencia.
+        </p>
+
+        <a href="blog.html" class="back-btn">← Volver al blog</a>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        Todos los derechos reservados © <span id="year"></span> · MP 15337
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

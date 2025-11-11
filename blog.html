@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Blog | Florencia Medina - Psicóloga en Córdoba</title>
+    <meta
+      name="description"
+      content="Artículos y reflexiones sobre bienestar emocional, ansiedad, autoestima y procesos terapéuticos. Por Lic. Florencia Medina."
+    />
+    <meta
+      name="keywords"
+      content="psicología, blog, ansiedad, autoestima, duelo, bienestar emocional, terapia online"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="logo2.jpg" type="image/jpeg" />
+
+    <style>
+      :root {
+        --accent: #6b46c1;
+        --muted: #6b7280;
+        --radius: 14px;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      .logo-link img {
+        transition: transform 0.25s ease;
+      }
+      .logo-link:hover img {
+        transform: scale(1.07);
+      }
+      body {
+        margin: 0;
+        color: #111;
+        background: linear-gradient(180deg, #f3e8ff, #a78bfa);
+        line-height: 1.6;
+      }
+
+      header {
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        border-bottom: 1px solid #eef2f7;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 24px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 18px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .cta {
+        background: var(--accent);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      /* Blog layout */
+      .blog-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 30px;
+      }
+
+      .blog-item {
+        display: flex;
+        gap: 20px;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        cursor: pointer;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .blog-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .blog-item img {
+        width: 240px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 10px;
+        flex-shrink: 0;
+      }
+
+      .blog-item .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .blog-item h3 {
+        margin: 0 0 8px;
+        color: #4b0082;
+      }
+
+      .blog-item p {
+        color: #444;
+        margin-bottom: 8px;
+      }
+
+      .read-more {
+        color: #6b46c1;
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: 8px;
+      }
+
+      .read-more:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 700px) {
+        .blog-item {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .blog-item img {
+          width: 100%;
+          height: 200px;
+        }
+      }
+
+      .card {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 10px;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        color: #4b0082;
+      }
+
+      .card p {
+        color: #444;
+        margin-bottom: 8px;
+      }
+
+      footer {
+        padding: 28px 0;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        nav ul {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div
+        class="container topbar"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 24px;
+        "
+      >
+        <!-- Brand (fixed clickable logo + name, keeps header alignment) -->
+        <div
+          class="brand"
+          style="display: flex; align-items: center; gap: 12px"
+        >
+          <!-- clickable logo -->
+          <a
+            href="index3.html"
+            class="logo-link"
+            style="display: inline-block; line-height: 0"
+          >
+            <img
+              src="logo2.jpg"
+              alt="Logo de Florencia Medina"
+              class="logo-img"
+              style="
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+                object-fit: cover;
+              "
+            />
+          </a>
+
+          <!-- clickable name text -->
+          <div
+            class="brand-text"
+            style="display: flex; flex-direction: column; line-height: 1"
+          >
+            <a
+              href="index3.html"
+              style="
+                text-decoration: none;
+                color: inherit;
+                font-weight: 700;
+                font-size: 16px;
+              "
+              >Florencia Medina</a
+            >
+            <div style="font-size: 13px; color: var(--muted)">
+              Lic. en Psicología — MP 15337
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <ul
+            style="
+              display: flex;
+              gap: 18px;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            "
+          >
+            <li>
+              <a
+                href="index3.html#sobre"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Sobre mí</a
+              >
+            </li>
+            <li>
+              <a
+                href="index3.html#servicios"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                href="index3.html#faq"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Preguntas frecuentes</a
+              >
+            </li>
+            <li>
+              <a
+                href="index3.html#contacto"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Call to action button -->
+        <a
+          class="cta"
+          href="https://wa.me/5493644401297?text=Hola%20Florencia,%20quiero%20reservar%20una%20consulta"
+          target="_blank"
+          style="
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+          "
+        >
+          Contactame
+        </a>
+      </div>
+    </header>
+
+    <!-- Blog Previews -->
+    <main class="container">
+      <h1 style="text-align: center; color: #4b0082">
+        Blog de Bienestar Emocional
+      </h1>
+      <p style="text-align: center; color: #555">
+        Reflexiones, herramientas y lecturas para acompañarte en tu proceso
+        personal.
+      </p>
+
+      <div class="blog-list">
+        <!-- Blog Card 1 -->
+        <div class="blog-item" onclick="location.href='articulo1.html'">
+          <img src="ansiedad.jpg" alt="Ansiedad y manejo emocional" />
+          <div class="content">
+            <h3>Cómo manejar la ansiedad en tiempos difíciles</h3>
+            <p>
+              Pequeños pasos y estrategias para reducir el estrés y reconectar
+              con vos mismo.
+            </p>
+            <a href="articulo1.html" class="read-more">Leer más →</a>
+          </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="blog-item" onclick="location.href='articulo2.html'">
+          <img src="autoestima.jpg" alt="Autoestima y autoconfianza" />
+          <div class="content">
+            <h3>Construir autoestima: un camino hacia el bienestar</h3>
+            <p>
+              Explorá formas de fortalecer tu autoestima desde la aceptación y
+              la autocompasión.
+            </p>
+            <a href="articulo2.html" class="read-more">Leer más →</a>
+          </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="blog-item" onclick="location.href='articulo3.html'">
+          <img src="duelo.png" alt="Procesos de duelo" />
+          <div class="content">
+            <h3>Acompañar los procesos de duelo</h3>
+            <p>
+              Reflexiones y herramientas para transitar la pérdida con empatía y
+              cuidado.
+            </p>
+            <a href="articulo3.html" class="read-more">Leer más →</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div>
+          Todos los derechos reservados © <span id="year"></span> · Matrícula
+          profesional MP 15337
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

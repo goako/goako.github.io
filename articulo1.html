@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Cómo manejar la ansiedad en tiempos difíciles | Blog - Florencia Medina
+    </title>
+    <meta
+      name="description"
+      content="Consejos prácticos y reflexiones para aprender a gestionar la ansiedad y cuidar tu bienestar emocional. Por Lic. Florencia Medina, Psicóloga en Córdoba."
+    />
+    <meta
+      name="keywords"
+      content="ansiedad, estrés, psicología, salud mental, bienestar emocional, terapia online, Florencia Medina"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="logo2.jpg" type="image/jpeg" />
+
+    <style>
+      :root {
+        --accent: #6b46c1;
+        --muted: #6b7280;
+        --radius: 14px;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      .logo-link img {
+        transition: transform 0.25s ease;
+      }
+      .logo-link:hover img {
+        transform: scale(1.07);
+      }
+      body {
+        margin: 0;
+        color: #111;
+        background: linear-gradient(180deg, #f3e8ff, #a78bfa);
+        line-height: 1.6;
+      }
+
+      header {
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        border-bottom: 1px solid #eef2f7;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 24px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 18px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .cta {
+        background: var(--accent);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      /* === Blog Content === */
+      .blog-article {
+        background: #ffffff;
+        border-radius: var(--radius);
+        padding: 40px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-top: 40px;
+      }
+
+      .blog-article h1 {
+        font-size: 2rem;
+        color: #4b0082;
+        margin-bottom: 10px;
+      }
+
+      .blog-article p {
+        margin-bottom: 16px;
+        color: #333;
+      }
+
+      .blog-article h2 {
+        color: #6b46c1;
+        margin-top: 28px;
+      }
+
+      .back-btn {
+        display: inline-block;
+        margin-top: 30px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: transform 0.2s ease;
+      }
+
+      .back-btn:hover {
+        transform: scale(1.05);
+      }
+
+      footer {
+        padding: 28px 0;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        nav ul {
+          display: none;
+        }
+        .blog-article {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div
+        class="container topbar"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 24px;
+        "
+      >
+        <!-- Brand (fixed clickable logo + name, keeps header alignment) -->
+        <div
+          class="brand"
+          style="display: flex; align-items: center; gap: 12px"
+        >
+          <!-- clickable logo -->
+          <a
+            href="index3.html"
+            class="logo-link"
+            style="display: inline-block; line-height: 0"
+          >
+            <img
+              src="logo2.jpg"
+              alt="Logo de Florencia Medina"
+              class="logo-img"
+              style="
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+                object-fit: cover;
+              "
+            />
+          </a>
+
+          <!-- clickable name text -->
+          <div
+            class="brand-text"
+            style="display: flex; flex-direction: column; line-height: 1"
+          >
+            <a
+              href="index3.html"
+              style="
+                text-decoration: none;
+                color: inherit;
+                font-weight: 700;
+                font-size: 16px;
+              "
+              >Florencia Medina</a
+            >
+            <div style="font-size: 13px; color: var(--muted)">
+              Lic. en Psicología — MP 15337
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <ul
+            style="
+              display: flex;
+              gap: 18px;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            "
+          >
+            <li>
+              <a
+                href="index3.html#sobre"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Sobre mí</a
+              >
+            </li>
+            <li>
+              <a
+                href="index3.html#servicios"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                href="index3.html#faq"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Preguntas frecuentes</a
+              >
+            </li>
+            <li>
+              <a
+                href="index3.html#contacto"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                style="
+                  color: var(--muted);
+                  text-decoration: none;
+                  font-weight: 600;
+                "
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Call to action button -->
+        <a
+          class="cta"
+          href="https://wa.me/5493644401297?text=Hola%20Florencia,%20quiero%20reservar%20una%20consulta"
+          target="_blank"
+          style="
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+          "
+        >
+          Contactame
+        </a>
+      </div>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="container">
+      <article class="blog-article">
+        <h1>Cómo manejar la ansiedad en tiempos difíciles</h1>
+        <p>
+          La ansiedad es una emoción humana natural, que nos prepara para
+          afrontar desafíos y adaptarnos a los cambios. Sin embargo, cuando se
+          vuelve constante o intensa, puede afectarnos física y emocionalmente,
+          generando malestar, preocupación y agotamiento.
+        </p>
+
+        <h2>Reconocer la ansiedad</h2>
+        <p>
+          El primer paso para manejarla es reconocer sus señales: tensión
+          muscular, pensamientos acelerados, sensación de falta de aire o
+          dificultad para concentrarse. No se trata de eliminar la ansiedad,
+          sino de entender qué nos está queriendo decir.
+        </p>
+
+        <h2>Estrategias para reducirla</h2>
+        <p>
+          🟣 <strong>Respiración consciente:</strong> Tomar respiraciones lentas
+          y profundas ayuda a calmar el sistema nervioso y volver al presente.
+        </p>
+        <p>
+          🟣 <strong>Rutinas saludables:</strong> Dormir bien, alimentarse
+          correctamente y moverse todos los días mejora el bienestar emocional.
+        </p>
+        <p>
+          🟣 <strong>Conexión con otros:</strong> Hablar con personas de
+          confianza o un profesional permite aliviar la carga emocional.
+        </p>
+        <p>
+          🟣 <strong>Autocompasión:</strong> Ser amable con uno mismo es clave.
+          No estás solo/a en sentir ansiedad, y pedir ayuda es un acto de
+          valentía.
+        </p>
+
+        <h2>Recordá</h2>
+        <p>
+          Manejar la ansiedad no significa “no sentirla”, sino aprender a
+          convivir con ella desde un lugar más saludable. Si sentís que te
+          sobrepasa o interfiere en tu vida diaria, buscar acompañamiento
+          terapéutico puede marcar una gran diferencia.
+        </p>
+
+        <a href="index3.html#blog" class="back-btn">← Volver al inicio</a>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div>
+          Todos los derechos reservados © <span id="year"></span> · Matrícula
+          profesional MP 15337
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
