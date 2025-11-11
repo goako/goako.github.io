@@ -229,7 +229,13 @@
   border-left: 3px solid #c084fc;
   border-radius: 0 0 8px 8px;
 }
-
+#blog .card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+#blog .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
       footer {
         padding: 28px 0;
         color: var(--muted);
@@ -430,6 +436,7 @@
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#faq">Preguntas frecuentes</a></li>
             <li><a href="#contacto">Contacto</a></li>
+           <li><a href="blog.html">Blog</a></li>
           </ul>
         </nav>
         <div>
@@ -438,6 +445,10 @@
       </div>
     </header>
 
+
+    </div>
+  </div>
+</section>
     <!-- Main content -->
     <main class="container">
       <!-- Hero -->
@@ -679,12 +690,37 @@ Si alguna de estas situaciones se te hace conocida, es probable que te resulte b
           Enviar consulta por correo
         </button>
       </form>
-    </div>
-  </div>
 </section>
-
-   
     </main>
+    <!-- Blog Section -->
+<section id="blog" style="padding: 2px 0;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom: 15px;">Blog</h2>
+    <div class="grid">
+      
+      <!-- Blog Card 1 -->
+      <div class="card" style="cursor: pointer;" onclick="location.href='articulo1.html'">
+        <img src="ansiedad.jpg" alt="Ansiedad y manejo emocional" style="width:100%; border-radius:12px; margin-bottom:10px;">
+        <h3>Cómo manejar la ansiedad en tiempos difíciles</h3>
+        <p>Pequeños pasos y estrategias para reducir el estrés y reconectar con vos mismo.</p>
+        <a href="articulo1.html" style="color:#6b46c1; font-weight:600;">Leer más →</a>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="card" style="cursor: pointer;" onclick="location.href='articulo2.html'">
+        <img src="autoestima.jpg" alt="Autoestima y autoconfianza" style="width:100%; border-radius:12px; margin-bottom:10px;">
+        <h3>Construir autoestima: un camino hacia el bienestar</h3>
+        <p>Explorá formas de fortalecer tu autoestima desde la aceptación y la autocompasión.</p>
+        <a href="articulo2.html" style="color:#6b46c1; font-weight:600;">Leer más →</a>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="card" style="cursor: pointer;" onclick="location.href='articulo3.html'">
+        <img src="duelo.png" alt="Procesos de duelo" style="width:100%; border-radius:12px; margin-bottom:10px;">
+        <h3>Acompañar los procesos de duelo</h3>
+        <p>Reflexiones y herramientas para transitar la pérdida con empatía y cuidado.</p>
+        <a href="articulo3.html" style="color:#6b46c1; font-weight:600;">Leer más →</a>
+      </div>
     <script>
 function handleForm(e) {
   e.preventDefault();
@@ -719,13 +755,24 @@ function handleForm(e) {
     });
   });
 </script>
-
+<!-- Invisible element between blog section and footer -->
+<div id="spacer-trigger" style="width:0; height:0; visibility:hidden; position:relative;"></div>
     <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div>Todos los derechos reservados © <span id="year"></span> · Matrícula profesional MP 15337</div>
-      </div>
-    </footer>
+<footer>
+  <div class="container">
+    <div>Todos los derechos reservados © <span id="year"></span> · Matrícula profesional MP 15337</div>
+  </div>
+</footer>
+
+<!-- ✅ Year updater script (place after footer) -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  });
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector("#opiniones .slider");
@@ -766,4 +813,3 @@ function handleForm(e) {
           }
         });
       });
-
